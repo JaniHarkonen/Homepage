@@ -1,8 +1,10 @@
-<main>
-  <div class="app-container">
-    <div class="width-80">
-      <app-header [tabKeys]="tabKeys" [tabs]="headerTabs"></app-header>
+<div class="app-container">
+  <div class="top-level-layout">
+    <div class="header-layout">
+      <app-header [tabKeys]="tabKeys" [tabs]="headerTabs" />
+    </div>
+    <div class="wrapper-layout">
+      <router-outlet />
     </div>
   </div>
-</main>
-<router-outlet />
+</div>
