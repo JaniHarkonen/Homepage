@@ -1,0 +1,5 @@
+<div class="site-header">
+  <button class="site-header-tab-button" *ngFor="let tab of tabKeys" [routerLink]="tabs[tab].key">
+    {{tabs[tab].caption}}
+  </button>
+</div>
