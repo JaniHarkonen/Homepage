@@ -1,5 +1,16 @@
 .project-carousel-layout {
   display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.project-card-layout {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  grid-row: 1 / 5;
+}
+
+.project-carousel-timeline {
+  grid-row: 5 / 6;
 }
