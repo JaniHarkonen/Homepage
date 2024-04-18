@@ -12,6 +12,10 @@
   border-style: solid;
   border-width: 1px;
   border-color: black;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .timeline-nav-button {

@@ -1,22 +1,19 @@
 <div class="project-carousel-layout">
   <div class="project-card-layout">
     <div class="d-flex align-items-center">
-      <img class="width-100 aspect-ratio-1-1" src="../../../assets/images/missing-image.png">
+      <img class="width-100 aspect-ratio-1-1" src="../../../assets/projects/editor2d2/gui layout.png">
     </div>
     <div class="d-flex align-items-center">
       <div>
-        <h3>Editor2D</h3>
+        <h3>{{ selectedProject.name }}</h3>
         <p>
-          this is a brief description of the project right here and this is all there is to it
-        </p>
-        <p>
-          but one thing is for certain and that is that nothing is for certain
+          {{ selectedProject.description }}
         </p>
         <button class="generic-button">Read more</button>
       </div>
     </div>
   </div>
   <div class="d-flex justify-content-center align-items-center project-carousel-timeline">
-    <app-timeline />
+    <app-timeline (selectElement)="selectProject($event)" [indices]="projectOrder" [selectedIndex]="selectedProjectIndex"/>
   </div>
 </div>

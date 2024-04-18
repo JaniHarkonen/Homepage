@@ -1,9 +1,18 @@
 <div class="timeline-layout">
-  <button class="generic-button timeline-nav-button">&#8249;</button>
-  <div class="timeline-element"></div>
-  <div class="timeline-element"></div>
-  <div class="timeline-element"></div>
-  <div class="timeline-element"></div>
-  <div class="timeline-element"></div>
-  <button class="generic-button timeline-nav-button">&#8250;</button>
+  <!-- Back -->
+  <button class="generic-button timeline-nav-button" (click)="onAdvance(-1)">
+    &#8249;
+  </button>
+
+  <div 
+    class="timeline-element"
+    *ngFor="let item of indices; index as i"
+    (click)="onSelect(i)"
+    [style.border-width]="(i === selectedIndex) ? '2px' : '1px'">
+  </div>
+
+  <!-- Next -->
+  <button class="generic-button timeline-nav-button" (click)="onAdvance(1)">
+    &#8250;
+  </button>
 </div>
