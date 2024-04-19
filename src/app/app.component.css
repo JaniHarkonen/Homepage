@@ -20,5 +20,12 @@
 }
 
 .wrapper-layout {
+  height: 100%;
   grid-row: 2 / 11;
+}
+
+@media screen and (max-width: 600px) {
+  .top-level-layout {
+    width: 100%;
+  }
 }
