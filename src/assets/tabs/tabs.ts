@@ -1,10 +1,10 @@
 export type Tab = {
-  readonly index: Number,
+  readonly index: number,
   readonly key: string,
   readonly caption: string
 }
 
-const createTab = (index: Number, key: string, caption: string): Tab => {
+const createTab = (index: number, key: string, caption: string): Tab => {
   return {
     index,
     key,
