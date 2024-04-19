@@ -27,4 +27,8 @@
 
   border-radius: 50%;
   background-color: rgb(200, 200, 200);
+
+  &:hover {
+    background-color: #e2e2e2;
+  }
 }

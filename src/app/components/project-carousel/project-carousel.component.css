@@ -1,16 +1,42 @@
 .project-carousel-layout {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 20px;
+  grid-template-rows: repeat(10, 1fr);
+  height: 100%;
 }
 
 .project-card-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 100%;
+
   grid-gap: 20px;
-  grid-row: 1 / 5;
+  grid-row: 2 / 10;
+}
+
+.project-card-description {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.project-card-video {
+  width: 100%;
+  height: 100%;
 }
 
 .project-carousel-timeline {
-  grid-row: 5 / 6;
+  grid-row: 10 / 11;
+}
+
+
+@media screen and (max-width: 825px) {
+  .project-card-layout {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+  }
+}
+
+@media screen and (min-width: 826px) {
+  .project-card-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
