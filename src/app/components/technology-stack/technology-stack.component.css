@@ -1,0 +1,9 @@
+.tech-stack-layout {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+}
+
+.tech-stack-icon-layout {
+  height: 64px;
+}
