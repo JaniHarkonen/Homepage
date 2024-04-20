@@ -9,12 +9,31 @@
   height: 100%;
 
   grid-gap: 20px;
-  grid-row: 2 / 10;
+  grid-row: 1 / 10;
 }
 
 .project-card-description {
+  display: grid;
+  overflow-y: hidden;
+  grid-template-rows: repeat(10, 1fr);
   height: 100%;
-  overflow-y: scroll;
+}
+
+.project-card-description-caption-layout {
+  grid-row: 1 / 2;
+}
+
+.project-card-description-text-layout {
+  grid-row: 2 / 11;
+  overflow-y: auto;
+}
+
+.project-card-expand-button {
+  float: right;
+
+  width: 100px;
+
+  margin: 10px;
 }
 
 .project-card-video {
@@ -46,6 +65,6 @@
   }
 
   .project-card-layout {
-    grid-row: 2 / 7;
+    grid-row: 1 / 7;
   }
 }

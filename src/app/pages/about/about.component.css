@@ -1,6 +1,6 @@
 .about-layout {
   display: grid;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
 .about-face-image {
@@ -20,7 +20,7 @@
 }
 
 .about-profile-layout {
-  grid-row: 3 / 10;
+  grid-row: 3 / 21;
   text-align: justify;
   text-justify: inter-word;
 }

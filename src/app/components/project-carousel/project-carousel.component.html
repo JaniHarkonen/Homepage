@@ -5,13 +5,15 @@
       </video>
     </div>
     <div class="project-card-description">
-      <div>
+      <div class="project-card-description-caption-layout">
         <h3>{{ selectedProject.info.name }}</h3>
+      </div>
+      <div class="project-card-description-text-layout">
         <div [innerHTML]="getDescriptionHTML()">
         </div>
         <br/>
         <button 
-          class="generic-button"
+          class="generic-button project-card-expand-button"
           (click)="toggleDescription()"
         >
           {{ getDescriptionButtonCaption() }}
