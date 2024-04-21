@@ -4,7 +4,10 @@
       <h1>Project browser</h1>
     </div>
     <div class="projects-carousel-layout">
-      <app-project-carousel [projects]="projects" [projectOrder]="projectOrder" />
+      <app-project-carousel 
+        [projects]="getProjects()" 
+        [order]="getOrder()"
+      />
     </div>
   </div>
 </div>
