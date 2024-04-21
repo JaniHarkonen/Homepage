@@ -3,10 +3,13 @@
     class="tech-stack-icon-layout" 
     *ngFor="let technology of getTechnologies()"
   >
-    <img 
-      class="width-100 height-100" 
+    <img
+      class="width-100 aspect-ratio-1-1" 
       [src]="'../../../' + technology.iconURL" 
       [title]="technology.name"
     />
+    <div class="tech-stack-icon-caption-layout">
+      {{ technology.name }}
+    </div>
   </div>
 </div>

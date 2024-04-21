@@ -28,6 +28,11 @@
   overflow-y: auto;
 }
 
+.project-card-description-text {
+  background-color: black;
+  color: white;
+}
+
 .project-card-expand-button {
   float: right;
 
