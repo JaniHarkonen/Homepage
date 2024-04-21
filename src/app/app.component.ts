@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TABS } from '../assets/tabs/tabs';
@@ -11,7 +11,11 @@ import { TABS } from '../assets/tabs/tabs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  public tabOrder: string[] = [
+    TABS["about"].id,
+    TABS["projects"].id,
+    TABS["contact"].id
+  ];
+
   title = 'homepage';
-  @Input() headerTabs = TABS
-  @Input() tabKeys = Object.keys(TABS)
 }

@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TABS, Tabs } from '../../assets/tabs/tabs';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() tabs: any
-  @Input() tabKeys: any
+  public tabs: Tabs = TABS;
+  
+  @Input() order: string[] = [];
 }

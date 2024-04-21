@@ -1,0 +1,15 @@
+.contact-page-layout {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+
+  height: 100%;
+}
+
+.contact-caption-layout {
+  grid-row: 2 / 3;
+}
+
+.contact-text-layout {
+  grid-row: 3 / 21;
+  overflow-y: auto;
+}

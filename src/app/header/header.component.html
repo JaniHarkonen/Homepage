@@ -1,9 +1,9 @@
 <div class="site-header">
   <button 
     class="site-header-tab-button" 
-    *ngFor="let tab of tabKeys" 
-    [routerLink]="tabs[tab].key"
+    *ngFor="let tabKey of order" 
+    [routerLink]="tabs[tabKey].routerLink"
   >
-    {{tabs[tab].caption}}
+    {{tabs[tabKey].caption}}
   </button>
 </div>

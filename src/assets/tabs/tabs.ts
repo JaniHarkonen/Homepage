@@ -1,19 +1,23 @@
 export type Tab = {
-  readonly index: number,
-  readonly key: string,
-  readonly caption: string
+  readonly id: string,
+  readonly caption: string,
+  readonly routerLink: string
 }
 
-const createTab = (index: number, key: string, caption: string): Tab => {
+export type Tabs = {
+  [key: string]: Tab
+}
+
+export const createTab = (id: string, caption: string, routerLink: string): Tab => {
   return {
-    index,
-    key,
-    caption
+    id,
+    caption,
+    routerLink
   };
 };
 
-export const TABS = {
-  0: createTab(0, "about", "About me"),
-  1: createTab(1, "projects", "Projects"),
-  2: createTab(2, "contact", "Contact me")
+export const TABS: Tabs = {
+  "about": createTab("about", "About me", "about"),
+  "projects": createTab("projects", "Projects", "projects"),
+  "contact": createTab("contact", "Contact me", "contact")
 };
