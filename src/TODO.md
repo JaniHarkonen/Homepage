@@ -3,6 +3,7 @@
 set by a parent component instead
 - extract the frequently occurring page layout stylings into the global styles.css
 - trim redundant divs
+- create a model folder where types and interfaces will be stored
 
 Tech stack icons from:
 https://github.com/devicons/devicon/tree/master

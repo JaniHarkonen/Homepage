@@ -9,7 +9,20 @@
   grid-row: 2 / 3;
 }
 
-.contact-text-layout {
+.contact-list-layout {
   grid-row: 3 / 21;
   overflow-y: auto;
+}
+
+.contact-list-item {
+  margin-bottom: 12px;
+}
+
+.contact-platform-icon-layout {
+  width: 36px;
+  height: 32px;
+}
+
+.contact-platform-link-layout {
+  margin-left: 28px;
 }

@@ -44,6 +44,10 @@
   overflow-y: hidden;
 }
 
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 1350px) {
   .width-80-responsive {
     width: calc(100% - 20px);
@@ -93,4 +97,19 @@ button {
     cursor: pointer;
     background-color: gray;
   }
+}
+
+.popup-link-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  filter: 
+    brightness(0) 
+    saturate(100%) 
+    invert(9%) 
+    sepia(100%) 
+    saturate(7174%) 
+    hue-rotate(248deg) 
+    brightness(81%) 
+    contrast(140%);
 }

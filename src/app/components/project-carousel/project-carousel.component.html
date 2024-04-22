@@ -12,6 +12,13 @@
         <div [innerHTML]="getDescriptionHTML()">
         </div>
         <br/>
+        <a [href]="getProjectLink()" target="_blank">
+          View on GitHub
+          <img 
+            class="popup-link-icon"
+            src="../../../assets/images/popup-link-icon.svg"
+          />
+        </a>
         <button 
           class="generic-button project-card-expand-button"
           (click)="toggleDescription()"

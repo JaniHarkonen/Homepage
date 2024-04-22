@@ -21,7 +21,10 @@ type ProjectSelection = {
 @Component({
   selector: 'app-project-carousel',
   standalone: true,
-  imports: [TimelineComponent, HttpClientModule],
+  imports: [
+    TimelineComponent,
+    HttpClientModule
+  ],
   templateUrl: './project-carousel.component.html',
   styleUrl: './project-carousel.component.css'
 })
@@ -152,7 +155,7 @@ export class ProjectCarouselComponent {
    * a string.
    */
   public getDescriptionButtonCaption(): string {
-    return (this.showFullDescription) ? "Read more" : "Less";
+    return (this.showFullDescription) ? "Less" : "Read more";
   }
 
   /**
@@ -176,5 +179,9 @@ export class ProjectCarouselComponent {
    */
   public getOrder(): string[] {
     return this.order;
+  }
+
+  public getProjectLink(): string {
+    return this.projectSelection.projectInfo?.repoURL || "";
   }
 }

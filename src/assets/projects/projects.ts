@@ -20,7 +20,8 @@ export type ProjectInfo = {
   readonly name: string,
   readonly briefURL: string,
   readonly descriptionURL: string,
-  readonly videoURL: string
+  readonly videoURL: string,
+  readonly repoURL: string,
   readonly status: ProjectStatus
 }
 
@@ -34,6 +35,7 @@ export const createProject = (
   briefURL: string, 
   descriptionURL: string,
   videoURL: string,
+  repoURL: string,
   status: ProjectStatus = ProjectStatus.COMPLETE
 ): ProjectInfo => {
   return {
@@ -42,6 +44,7 @@ export const createProject = (
     briefURL,
     descriptionURL,
     videoURL,
+    repoURL,
     status
   };
 }
@@ -53,6 +56,7 @@ export const PROJECTS: Projects = {
     "johnengine/brief.html", 
     "johnengine/desc.html",
     "testing/test.mp4",
+    "https://github.com/JaniHarkonen/JOHNEngine"
     // status here
   ),
   "editor2d2": createProject(
@@ -61,6 +65,7 @@ export const PROJECTS: Projects = {
     "editor2d2/brief.html", 
     "editor2d2/desc.html",
     "testing/test2.mp4",
+    "https://github.com/JaniHarkonen/Editor2D2"
     // status here
   ),
   "dumpemsuite": createProject(
@@ -69,6 +74,7 @@ export const PROJECTS: Projects = {
     "dumpem-suite/brief.html", 
     "dumpem-suite/desc.html",
     "testing/test.mp4",
+    "https://github.com/JaniHarkonen/DumpEmSuite"
     // status here
   ),
   "merchbetter": createProject(
@@ -77,6 +83,7 @@ export const PROJECTS: Projects = {
     "merch-better/brief.html", 
     "merch-better/desc.html",
     "testing/test2.mp4",
+    "https://github.com/JaniHarkonen/MerchBetter"
     // status here
   )
 }
