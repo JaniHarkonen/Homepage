@@ -1,7 +1,7 @@
 .about-face-image-layout {
   display: flex;
   justify-content: center;
-  float: right; 
+  float: left; 
 
   width: 25%;
   aspect-ratio: 500 / 750;
@@ -9,23 +9,31 @@
   min-height: 250px;
 
   margin-left: 25px;
+  margin-right: 25px;
   margin-bottom: 25px;
 }
 
 .about-face-image {
   width: 100%;
   height: 100%;
+  background-color: white;
+}
+
+.about-tech-stack-layout {
+  width: 50%;
 }
 
 @media screen and (max-width: 400px) {
   .about-face-image-layout {
     width: 100%;
-    height: 50%;
+    height: 250px;
+
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .about-face-image {
-    width: 50%;
-    min-width: 166px;
+    width: 166px;
     max-height: 250px;
   }
 }

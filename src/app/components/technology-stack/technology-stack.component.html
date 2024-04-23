@@ -1,13 +1,16 @@
-<div class="width-100 tech-stack-layout">
-  <div 
-    class="tech-stack-icon-layout" 
+<div class="tech-stack-layout">
+  <div
+    class="tech-stack-item"
     *ngFor="let technology of getTechnologies()"
   >
-    <img
-      class="width-100 aspect-ratio-1-1" 
-      [src]="'../../../' + technology.iconURL" 
-      [title]="technology.name"
-    />
+    <div class="tech-stack-icon-layout">
+      <img
+        class="width-100 aspect-ratio-1-1" 
+        [src]="'../../../' + technology.iconURL" 
+        [title]="technology.name"
+      />
+    </div>
+      
     <div class="tech-stack-icon-caption-layout">
       {{ technology.name }}
     </div>

@@ -42,9 +42,10 @@
 }
 
 .project-card-video {
-  border-radius: 5px;
-  padding: 5px;
-  background-color: black;
+  /*border-style: solid;
+  border-width: 1px;
+  padding-right: 1px;*/
+  height: 80%;
 }
 
 .project-carousel-timeline {
@@ -55,14 +56,14 @@
 @media screen and (max-width: 825px) {
   .project-card-layout {
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 826px) {
   .project-card-layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .project-carousel-timeline {

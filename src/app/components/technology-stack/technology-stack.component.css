@@ -2,11 +2,19 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tech-stack-icon-layout {
-  width: 84px;
-  height: 100px;
+  width: 48px;
+  height: 48px;
 }
 
 .tech-stack-icon-caption-layout {
