@@ -120,9 +120,24 @@ button {
 }
 
 .common-page-caption-layout {
+  display: flex;
   grid-row: 2 / 3;
 }
 
 .common-page-content-layout {
   grid-row: 3 / 20;
+}
+
+@media screen and (max-width: 700px) {
+  .common-page-layout {
+    grid-template-rows: repeat(30, 1fr);
+  }
+
+  .common-page-caption-layout {
+    grid-row: 2 / 3;
+  }
+
+  .common-page-content-layout {
+    grid-row: 3 / 30;
+  }
 }
