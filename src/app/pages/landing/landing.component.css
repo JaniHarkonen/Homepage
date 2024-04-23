@@ -1,0 +1,12 @@
+.landing-layout {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-greeting-layout {
+  font-size: 32px;
+}
