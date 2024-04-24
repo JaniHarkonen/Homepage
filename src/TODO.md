@@ -6,6 +6,4 @@ set by a parent component instead
 - trim redundant divs
 - create a model folder where types and interfaces will be stored
 - add SQL to the tech stack
-
-Tech stack icons from:
-https://github.com/devicons/devicon/tree/master
+- make sure encapsulation is followed properly, other OOP concepts
