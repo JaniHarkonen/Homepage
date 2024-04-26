@@ -4,37 +4,39 @@
       <h1>Contact me</h1>
     </div>
     <div class="common-page-content-layout">
-      <div 
-        class="contact-list-item"
-        *ngFor="let platform of getContactInfo().socialMediaPlatforms"
-      >
-        <div>
-          <p>{{ platform.shoutOut }}</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <img 
-            class="contact-platform-icon-layout" 
-            [src]="platform.iconURL" 
-          />
-          <div class="white-space-nowrap">
-            <a
-              class="contact-platform-link-layout"
-              [href]="platform.url"
-              target="_blank"
-            >
-              {{ platform.name }}
-            </a>
-            <img
-              class="popup-link-icon"
-              src="../../../assets/images/popup-link-icon.svg"
-            />
+      <address>
+        <div 
+          class="contact-list-item"
+          *ngFor="let platform of getContactInfo().socialMediaPlatforms"
+        >
+          <div>
+            <p>{{ platform.shoutOut }}</p>
           </div>
+          <div class="d-flex align-items-center">
+            <img 
+              class="contact-platform-icon-layout" 
+              [src]="platform.iconURL" 
+            />
+            <div class="white-space-nowrap">
+              <a
+                class="contact-platform-link-layout"
+                [href]="platform.url"
+                target="_blank"
+              >
+                {{ platform.name }}
+              </a>
+              <img
+                class="popup-link-icon"
+                src="../../../assets/images/popup-link-icon.svg"
+              />
+            </div>
+          </div>
+          <br />
         </div>
         <br />
-      </div>
-      <br />
-      <p>Or contact me directly via e-mail:</p>
+        <p>Or contact me directly via e-mail:</p>
         <a [href]="'mailto:' + getContactInfo().email">{{ getContactInfo().email }}</a>
-    </div>    
+      </address>
+    </div>
   </div>
 </div>

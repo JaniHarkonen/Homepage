@@ -1,7 +1,7 @@
 .tech-stack-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(64px, max-content));
-  gap: 10px;
+  gap: 15px;
 }
 
 .tech-stack-item {

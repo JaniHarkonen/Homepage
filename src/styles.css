@@ -107,6 +107,10 @@ iframe {
   border-style: none;
 }
 
+address {
+  font-style: normal;
+}
+
 .generic-button {
   background-color: black;
   color: white;
@@ -155,16 +159,23 @@ iframe {
   font-size: 50px;
 }
 
+.emphasized-paragraph {
+  border-left-style: solid;
+  border-left-color: #EAEAEA;
+  border-left-width: 20px;
+  padding-left: 20px;
+}
+
 @media screen and (max-width: 700px) {
   .common-page-layout {
     grid-template-rows: repeat(30, 1fr);
   }
 
   .common-page-caption-layout {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
   }
 
   .common-page-content-layout {
-    grid-row: 3 / 30;
+    grid-row: 2 / 30;
   }
 }

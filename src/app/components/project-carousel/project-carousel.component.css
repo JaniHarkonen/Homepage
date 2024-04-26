@@ -5,27 +5,36 @@
 }
 
 .project-card-layout {
-  display: grid;
   height: 100%;
-
+  
+  display: grid;
+  /* GRID TEMPLATE COLUMNS ARE SPECIFIED IN MEDIA QUERIES BELOW */
   grid-gap: 20px;
   grid-row: 1 / 10;
 }
 
-.project-card-description {
+.project-card-description-container {
   display: grid;
-  overflow-y: hidden;
-  grid-template-rows: repeat(10, 1fr);
+  /* GRID TEMPLATE COLUMNS ARE SPECIFIED BY THE ANIMATION IN THE .TS */
+  /*grid-template-rows: 1fr auto auto auto;*/
   height: 100%;
+  overflow-y: hidden;
+}
+
+.project-expand-animation-dummy {
+  height: 5px;
 }
 
 .project-card-description-caption-layout {
-  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .project-card-description-text-layout {
-  grid-row: 2 / 11;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .project-card-description-text {
@@ -33,19 +42,31 @@
   color: white;
 }
 
-.project-card-expand-button {
-  float: right;
+.project-card-control-layout {
+  width: 100%;
 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.project-card-link {
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+}
+
+.project-card-expand-button {
   width: 100px;
 
   margin: 10px;
 }
 
 .project-card-video {
-  /*border-style: solid;
-  border-width: 1px;
-  padding-right: 1px;*/
-  height: 80%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .project-carousel-timeline {

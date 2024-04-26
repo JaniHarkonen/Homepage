@@ -4,6 +4,7 @@ import { nmod } from '../../../utils';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProjectInfo, Projects } from '../../../assets/projects/projects';
 import { CONFIG } from '../../../pathConfig';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 /**
  * Holds the state of the currently selected project including its index
@@ -26,7 +27,15 @@ type ProjectSelection = {
     HttpClientModule
   ],
   templateUrl: './project-carousel.component.html',
-  styleUrl: './project-carousel.component.css'
+  styleUrl: './project-carousel.component.css',
+  animations: [
+    trigger("expandCollapse", [
+      state("expanded", style({ gridTemplateRows: "0fr auto auto auto" })),
+      state("collapsed", style({ gridTemplateRows: "1fr auto auto auto" })),
+      transition("expanded => collapsed", [animate("1s ease-out")]),
+      transition("collapsed => expanded", [animate("1s ease-in")])
+    ])
+  ]
 })
 export class ProjectCarouselComponent {
   /**
@@ -146,7 +155,7 @@ export class ProjectCarouselComponent {
   public getDescriptionHTML(): string {
     return (
       (this.showFullDescription) ? 
-        this.projectSelection.descriptionHTML : this.projectSelection.briefHTML
+      this.projectSelection.descriptionHTML : this.projectSelection.briefHTML
     );
   }
 
@@ -181,7 +190,17 @@ export class ProjectCarouselComponent {
     return this.order;
   }
 
+  /**
+   * @returns The link to the online repository of the currently selected project.
+   */
   public getProjectLink(): string {
     return this.projectSelection.projectInfo?.repoURL || "";
+  }
+
+  /**
+   * @returns Whether the full description of the project is to be shown.
+   */
+  public isFullDescriptionShown(): boolean {
+    return this.showFullDescription;
   }
 }

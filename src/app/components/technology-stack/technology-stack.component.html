@@ -1,7 +1,7 @@
 <div class="tech-stack-layout width-100 height-100">
   <div
     class="tech-stack-item"
-    *ngFor="let technology of getTechnologies()"
+    *ngFor="let technology of getTechnologies(); index as techIndex"
   >
     <div class="tech-stack-icon-layout">
       <img
@@ -10,7 +10,9 @@
         [title]="technology.name"
       />
     </div>
-      
+    <div *ngIf="experienceLevels">
+      {{ experienceLevels[techIndex] }}
+    </div>
     <div class="tech-stack-icon-caption-layout">
       {{ technology.name }}
     </div>

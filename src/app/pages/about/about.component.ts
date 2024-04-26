@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TechnologyStackComponent } from '../../components/technology-stack/technology-stack.component';
 import { TECHNOLOGIES } from '../../../assets/technologies/technologies';
+import { SKILLS } from '../../../assets/skills';
 
 @Component({
   selector: 'app-about',
@@ -29,6 +30,10 @@ export class AboutComponent {
   ];
 
   public getTechnologyOrder(): string[] {
-    return this.technologyOrder;
+    return SKILLS.map((skill) => skill.technologyID);
+  }
+
+  public getExperienceLevels(): string[] {
+    return SKILLS.map((skill) => skill.experience);
   }
 }

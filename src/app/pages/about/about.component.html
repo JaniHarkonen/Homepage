@@ -5,55 +5,37 @@
         <h1>About me</h1>
       </div>
     </div>
-    <div class="common-page-content-layout height-100 overflow-y-hidden">
-      <div class="d-flex justify-content-center height-100 overflow-y-auto">
-        <div class="about-content-layout width-80-responsive">
+    <div class="common-page-content-layout height-100 d-flex justify-content-center overflow-y-hidden">
+      <div class="about-content-layout overflow-y-auto width-80-responsive">
+        <div>
           <section>
             <div class="about-face-image-layout">
-              <img 
-                class="about-face-image" 
-                src="../../../assets/images/my-face.png"
-              />
+              <div class="about-face-image">
+                <aside>
+                  <img
+                    class="width-100 height-100"
+                    src="../../../assets/images/my-face.png"
+                  />
+                </aside>
+              </div>
             </div>
-          </section>
-          <section>
             <h2>Front-end developer looking for the first job of his career</h2>
             Having graduated from Karelia University of Applied Sciences as a Bachelor of Business Information Technology, I'm now looking to turn my long-standing programming hobby into a career. I'm looking for a job in web-development, which is something that I've garnered a lot of experience in during my studies and through my personal projects. I've been programming since  I was 11 years old, which enables me to quickly learn new programming languages, concepts, frameworks and environments. I'm constantly honing my skills and deepening my knowledge by working on various projects of my own, some of which are available for viewing on my GitHub. I strive to carry out all tasks assigned to me as best as I can, which is something that hasn't gone unnoticed by my previous employers.
-            <br />
+          </section>
+          <section>
             <div>
               <h3>Skills</h3>
               <br />
               <div class="about-tech-stack-layout">
-                <app-technology-stack [order]="getTechnologyOrder()"/>
+                <app-technology-stack
+                  [order]="getTechnologyOrder()"
+                  [experienceLevels]="getExperienceLevels()"
+                />
               </div>
             </div>
           </section>
         </div>
       </div>
-      <!--
-      <div class="overflow-y-auto height-100 d-flex justify-content-center">
-        <div class="width-80-responsive">
-          <div class="about-face-image-layout">
-            <img
-              class="about-face-image"
-              src="assets/images/my-face.png"
-              alt="My face"
-            />
-          </div>
-          <div>
-            <h2>Front-end developer looking for the first job of his career</h2>
-            Having graduated from Karelia University of Applied Sciences as a Bachelor of Business Information Technology, I'm now looking to turn my long-standing programming hobby into a career. I'm looking for a job in web-development, which is something that I've garnered a lot of experience in during my studies and through my personal projects. I've been programming since  I was 11 years old, which enables me to quickly learn new programming languages, concepts, frameworks and environments. I'm constantly honing my skills and deepening my knowledge by working on various projects of my own, some of which are available for viewing on my GitHub. I strive to carry out all tasks assigned to me as best as I can, which is something that hasn't gone unnoticed by my previous employers.
-            <br />
-            <div>
-              <h3>Skills</h3>
-              <br />
-              <div class="about-tech-stack-layout">
-                <app-technology-stack [order]="getTechnologyOrder()"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>-->
     </div>
   </div>
 </div>
