@@ -2,9 +2,11 @@ import { Component, Input } from '@angular/core';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { nmod } from '../../../utils';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ProjectInfo, Projects } from '../../../assets/projects/projects';
+import { Projects } from '../../../assets/projects/projects';
 import { CONFIG } from '../../../pathConfig';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+
+import ProjectInfo from '../../../model/ProjectInfo';
 
 /**
  * Holds the state of the currently selected project including its index

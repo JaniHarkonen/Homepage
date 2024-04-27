@@ -1,5 +1,49 @@
 <div class="project-carousel-layout">
-  <div class="project-card-layout">
+    <div class="project-card-video-layout">
+      <iframe 
+        class="project-card-video"
+        allowfullscreen
+        src="https://www.youtube.com/embed/01rXk7iRDwg"
+      >
+      </iframe>
+    </div>
+    <div class="project-card-description-layout">
+      <div>
+        <h3>{{ getProjectName() }}</h3>
+      </div>
+      <div class="project-card-description-wrapper">
+        <div class="emphasized-paragraph">
+          <br />
+          <div [innerHTML]="getDescriptionHTML()">            
+          </div>
+          <br />
+        </div>
+        <div class="project-card-controls-layout">
+          <div>
+            <a
+              [href]="getProjectLink()"
+              target="_blank"
+            >
+              View on GitHub
+              <img
+                class="popup-link-icon"
+                src="../../../assets/images/popup-link-icon.svg"
+              />
+            </a>
+          </div>
+          <div></div>
+          <div>
+            <button
+              class="generic-button project-card-expand-button"
+              (click)="toggleDescription()"
+            >
+            {{ getDescriptionButtonCaption() }}
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!--<div class="project-card-layout">
     <div class="d-flex align-items-center">
       <iframe 
         class="project-card-video"
@@ -22,7 +66,6 @@
           <br/>
         </div>
       </div>
-      <br />
       <div class="project-card-control-layout">
         <div class="project-card-link">
           <a [href]="getProjectLink()" target="_blank">
@@ -44,8 +87,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="d-flex justify-content-center align-items-center project-carousel-timeline">
+  </div>-->
+  <div class="project-carousel-timeline">
     <app-timeline 
       (selectElement)="selectProject($event)" 
       [indices]="getOrder()" 

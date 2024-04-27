@@ -1,52 +1,8 @@
-export class ProjectStatus {
-  public static CANCELLED = new ProjectStatus("cancelled");
-  public static ON_HOLD = new ProjectStatus("on-hold");
-  public static IN_PROGRESS = new ProjectStatus("in-progress");
-  public static COMPLETE = new ProjectStatus("complete");
-
-  private key: string;
-
-  constructor(key: string) {
-    this.key = key;
-  }
-
-  public getKey(): string {
-    return this.key;
-  }
-}
-
-export type ProjectInfo = {
-  readonly id: string,
-  readonly name: string,
-  readonly briefURL: string,
-  readonly descriptionURL: string,
-  readonly videoURL: string,
-  readonly repoURL: string,
-  readonly status: ProjectStatus
-}
+import ProjectStatus from "../../model/ProjectStatus";
+import ProjectInfo, { createProject } from "../../model/ProjectInfo";
 
 export type Projects = {
   [key: string]: ProjectInfo
-}
-
-export const createProject = (
-  id: string, 
-  name: string, 
-  briefURL: string, 
-  descriptionURL: string,
-  videoURL: string,
-  repoURL: string,
-  status: ProjectStatus = ProjectStatus.COMPLETE
-): ProjectInfo => {
-  return {
-    id,
-    name,
-    briefURL,
-    descriptionURL,
-    videoURL,
-    repoURL,
-    status
-  };
 }
 
 export const PROJECTS: Projects = {

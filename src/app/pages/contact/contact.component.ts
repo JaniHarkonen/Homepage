@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { CONTACT_INFO, ContactInfo } from '../../../assets/contact-info';
+import { CONTACT_INFO } from '../../../assets/contact-info';
 import { NgFor } from '@angular/common';
+
+import ContactInfo from '../../../model/ContactInfo';
 
 @Component({
   selector: 'app-contact',

@@ -1,9 +1,5 @@
+import Skill from "../model/Skill";
 import { TECHNOLOGIES } from "./technologies/technologies";
-
-export type Skill = {
-  technologyID: string,
-  experience: string
-}
 
 export const SKILLS: Skill[] = [
   {

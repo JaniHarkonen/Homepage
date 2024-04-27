@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { TECHNOLOGIES, Technology } from '../../../assets/technologies/technologies';
+import { TECHNOLOGIES } from '../../../assets/technologies/technologies';
 import { NgFor, NgIf } from '@angular/common';
+
+import Technology from '../../../model/Technology';
 
 @Component({
   selector: 'app-technology-stack',
