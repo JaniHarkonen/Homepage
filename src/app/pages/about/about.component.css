@@ -22,6 +22,8 @@
 .about-face-image {
   width: 100%;
   aspect-ratio: 500 / 750;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .about-tech-stack-layout {

@@ -7,15 +7,6 @@
   gap: 20px;
 }
 
-.project-card-layoutOLD {
-  height: 100%;
-  
-  display: grid;
-  /* GRID TEMPLATE COLUMNS ARE SPECIFIED IN MEDIA QUERIES BELOW */
-  grid-gap: 20px;
-  grid-row: 1 / 10;
-}
-
 .project-card-layout {
   height: 100%;
 
@@ -26,6 +17,7 @@
 .project-card-video {
   width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: 10px;
 }
 
 .project-card-description-layout {
@@ -34,6 +26,8 @@
 
   display: grid;
   grid-template-rows: auto 1fr;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
 }
 
 .project-card-controls-layout {
@@ -46,13 +40,6 @@
 
 .project-card-description-wrapper {
   overflow-y: auto;
-}
-
-.project-card-description-containerOLD {
-  display: grid;
-  /* GRID TEMPLATE COLUMNS ARE SPECIFIED BY THE ANIMATION IN THE .TS */
-  height: 100%;
-  overflow-y: hidden;
 }
 
 .project-card-expand-button {
@@ -73,11 +60,12 @@
     overflow-y: auto;
 
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto 1fr;
   }
 
   .project-card-description-layout {
     overflow-y: visible;
+    grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
 

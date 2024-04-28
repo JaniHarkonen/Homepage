@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TABS, Tabs } from '../../assets/tabs/tabs';
 
 @Component({
@@ -12,6 +12,16 @@ import { TABS, Tabs } from '../../assets/tabs/tabs';
 })
 export class HeaderComponent {
   public tabs: Tabs = TABS;
-  
+
+  private router: Router;
+
   @Input() order: string[] = [];
+
+  constructor(router: Router) {
+    this.router = router;
+  }
+
+  public isTabSelected(tabKey: string): boolean {
+    return "/" + this.tabs[tabKey].routerLink === this.router.url;
+  }
 }

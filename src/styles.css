@@ -166,6 +166,12 @@ address {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 800px) {
+  .large-text {
+    font-size: 40px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .common-page-layout {
     grid-template-rows: repeat(30, 1fr);
@@ -177,5 +183,15 @@ address {
 
   .common-page-content-layout {
     grid-row: 2 / 30;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .large-text {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 25px;
   }
 }

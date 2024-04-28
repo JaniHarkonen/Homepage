@@ -4,7 +4,8 @@ import { nmod } from '../../../utils';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Projects } from '../../../assets/projects/projects';
 import { CONFIG } from '../../../pathConfig';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ExpandCollapseAnimation } from '../../animations/expand-collapse.anim';
+import { HorizontalSlideAnimation } from '../../animations/horizontal-slide.anim';
 
 import ProjectInfo from '../../../model/ProjectInfo';
 
@@ -31,12 +32,8 @@ type ProjectSelection = {
   templateUrl: './project-carousel.component.html',
   styleUrl: './project-carousel.component.css',
   animations: [
-    trigger("expandCollapse", [
-      state("expanded", style({ gridTemplateRows: "0fr auto auto auto" })),
-      state("collapsed", style({ gridTemplateRows: "1fr auto auto auto" })),
-      transition("expanded => collapsed", [animate("1s ease-out")]),
-      transition("collapsed => expanded", [animate("1s ease-in")])
-    ])
+    ExpandCollapseAnimation,
+    HorizontalSlideAnimation
   ]
 })
 export class ProjectCarouselComponent {
@@ -88,7 +85,7 @@ export class ProjectCarouselComponent {
   private fetchDescriptions(projectInfo: ProjectInfo | null): void {
     if( projectInfo == null )
     {
-      console.log("WARNING: Trying to fetch the description of a project with null ProjectInfo!");
+      console.error("WARNING: Trying to fetch the description of a project with null ProjectInfo!");
       return;
     }
 
