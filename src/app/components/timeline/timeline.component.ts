@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './timeline.component.css'
 })
 export class TimelineComponent {
-  @Input() indices: number[] = [];
+  @Input() indices: any[] = [];
   @Input() selectedIndex: number = 0;
   @Output() selectElement: EventEmitter<number> = new EventEmitter<number>();
 

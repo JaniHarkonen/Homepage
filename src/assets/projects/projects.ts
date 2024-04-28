@@ -1,59 +1,45 @@
-export type ProjectStatus = {
-  readonly title: string
+import ProjectStatus from "../../model/ProjectStatus";
+import ProjectInfo, { createProject } from "../../model/ProjectInfo";
+
+export type Projects = {
+  [key: string]: ProjectInfo
 }
 
-export type ProjectInfo = {
-  readonly index: number,
-  readonly name: string,
-  readonly briefURL: string,
-  readonly descriptionURL: string,
-  readonly videoURL: string
-  //readonly status: ProjectStatus
-}
-
-const createProject = (
-  index: number, 
-  name: string, 
-  briefURL: string, 
-  descriptionURL: string,
-  videoURL: string
-): ProjectInfo => {
-  return {
-    index,
-    name,
-    briefURL,
-    descriptionURL,
-    videoURL
-  };
-}
-
-export const PROJECTS = {
-  0: createProject(
-    0, 
+export const PROJECTS: Projects = {
+  "johnengine": createProject(
+    "johnengine", 
     "JOHNEngine", 
     "johnengine/brief.html", 
     "johnengine/desc.html",
-    "testing/test.mp4"
+    "testing/test.mp4",
+    "https://github.com/JaniHarkonen/JOHNEngine"
+    // status here
   ),
-  1: createProject(
-    1, 
+  "editor2d2": createProject(
+    "editor2d2", 
     "Editor2D2", 
     "editor2d2/brief.html", 
     "editor2d2/desc.html",
-    "testing/test2.mp4"
+    "testing/test2.mp4",
+    "https://github.com/JaniHarkonen/Editor2D2"
+    // status here
   ),
-  2: createProject(
-    2, 
+  "dumpemsuite": createProject(
+    "dumpemsuite", 
     "DumpEmSuite", 
     "dumpem-suite/brief.html", 
     "dumpem-suite/desc.html",
-    "testing/test.mp4"
+    "testing/test.mp4",
+    "https://github.com/JaniHarkonen/DumpEmSuite"
+    // status here
   ),
-  3: createProject(
-    3, 
+  "merchbetter": createProject(
+    "merchbetter", 
     "MerchBetter", 
     "merch-better/brief.html", 
     "merch-better/desc.html",
-    "testing/test2.mp4"
+    "testing/test2.mp4",
+    "https://github.com/JaniHarkonen/MerchBetter"
+    // status here
   )
 }

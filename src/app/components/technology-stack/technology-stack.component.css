@@ -1,0 +1,22 @@
+.tech-stack-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, max-content));
+  gap: 15px;
+}
+
+.tech-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-stack-icon-layout {
+  width: 48px;
+  height: 48px;
+}
+
+.tech-stack-icon-caption-layout {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}

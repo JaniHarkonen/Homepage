@@ -1,5 +1,12 @@
-<div class="site-header">
-  <button class="site-header-tab-button" *ngFor="let tab of tabKeys" [routerLink]="tabs[tab].key">
-    {{tabs[tab].caption}}
-  </button>
+<div class="site-header-layout">
+  <div class="site-header">
+    <button 
+      class="site-header-tab-button" 
+      *ngFor="let tabKey of order" 
+      [routerLink]="tabs[tabKey].routerLink"
+      [style]="isTabSelected(tabKey) ? {borderBottomColor: 'black'} : {borderBottomColor: 'white'}"
+    >
+      {{tabs[tabKey].caption}}
+    </button>
+  </div>
 </div>

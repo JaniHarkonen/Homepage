@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProjectCarouselComponent } from '../../components/project-carousel/project-carousel.component';
-import { PROJECTS } from '../../../assets/projects/projects';
+import { PROJECTS, Projects } from '../../../assets/projects/projects';
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +10,19 @@ import { PROJECTS } from '../../../assets/projects/projects';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
-  @Input() projects: any = PROJECTS;
-  @Input() projectOrder: number[] = [0, 1, 2, 3];
+  private projects: Projects = PROJECTS;
+  private projectOrder: string[] = [
+    PROJECTS["johnengine"].id,
+    PROJECTS["editor2d2"].id,
+    PROJECTS["merchbetter"].id,
+    PROJECTS["dumpemsuite"].id,
+  ];
+
+  public getProjects(): Projects {
+    return this.projects;
+  }
+
+  public getOrder(): string[] {
+    return this.projectOrder;
+  }
 }

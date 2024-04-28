@@ -1,15 +1,19 @@
 /****************** UTILITY STYLES ******************/
 
+.p-relative {
+  position: relative;
+}
+
 .width-100 {
   width: 100%;
 }
 
+.width-80 {
+  width: 80%;
+}
+
 .width-80-responsive {
   width: 80%;
-
-  @media screen and (max-width: 1350px) {
-    width: 100%;
-  }
 }
 
 .height-100 {
@@ -18,6 +22,10 @@
 
 .d-flex {
   display: flex;
+}
+
+.flex-direction-column {
+  flex-direction: column;
 }
 
 .justify-content-center {
@@ -36,12 +44,39 @@
   aspect-ratio: 1 / 1;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1350px) {
+  .width-80-responsive {
+    width: calc(100% - 20px);
+  }
+}
+
 
 /****************** ANIMATION STYLES ******************/
 
 .fade-in-on-load {
   animation: anim-fade-in;
   animation-duration: 1s;
+}
+
+.fade-in-on-load-slow {
+  animation: anim-fade-in;
+  animation-duration: 2s;
 }
 
 @keyframes anim-fade-in {
@@ -60,11 +95,20 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: "Rubik", Verdana, Tahoma, sans-serif;
+  font-size: 100%;
 }
 
 button {
   font-family: Verdana, Tahoma, sans-serif;
+}
+
+iframe {
+  border-style: none;
+}
+
+address {
+  font-style: normal;
 }
 
 .generic-button {
@@ -72,11 +116,82 @@ button {
   color: white;
   border-style: solid;
   border-width: 0px;
-  border-radius: 3px;
-  padding: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   &:hover {
     cursor: pointer;
-    background-color: gray;
+    background-color: #545454;
+  }
+}
+
+.popup-link-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  filter: 
+    brightness(0) 
+    saturate(100%) 
+    invert(9%) 
+    sepia(100%) 
+    saturate(7174%) 
+    hue-rotate(248deg) 
+    brightness(81%) 
+    contrast(140%);
+}
+
+.common-page-layout {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.common-page-caption-layout {
+  grid-row: 2 / 3;
+}
+
+.common-page-content-layout {
+  grid-row: 3 / 20;
+}
+
+.large-text {
+  font-size: 50px;
+}
+
+.emphasized-paragraph {
+  border-left-style: solid;
+  border-left-color: #EAEAEA;
+  border-left-width: 20px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+  .common-page-layout {
+    grid-template-rows: repeat(30, 1fr);
+  }
+
+  .common-page-caption-layout {
+    grid-row: 1 / 2;
+  }
+
+  .common-page-content-layout {
+    grid-row: 2 / 30;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .large-text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .large-text {
+    font-size: 25px;
+  }
+
+  h1 {
+    font-size: 25px;
   }
 }

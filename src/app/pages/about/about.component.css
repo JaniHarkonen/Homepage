@@ -1,0 +1,47 @@
+.about-content-layout {
+  height: 100%;
+}
+
+.about-description-layout {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.about-face-image-layout {
+  width: 25%;
+
+  display: flex;
+  justify-content: center;
+
+  float: right;
+
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-face-image {
+  width: 100%;
+  aspect-ratio: 500 / 750;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-tech-stack-layout {
+  width: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .about-face-image-layout {
+    width: 100%;
+  }
+
+  .about-face-image {
+    width: 166px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-tech-stack-layout {
+    width: 100%;
+  } 
+}

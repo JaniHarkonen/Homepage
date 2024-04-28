@@ -1,5 +1,6 @@
 export const CONFIG = {
   paths: {
-    projects: "assets/projects/"
+    "projects": "assets/projects/",
+    "platform-icons": "assets/images/platforms/"
   }
 };

@@ -1,5 +1,13 @@
 <div class="d-flex justify-content-center height-100 fade-in-on-load">
-  <div class="width-80-responsive">
-    <app-project-carousel [projects]="projects" [projectOrder]="projectOrder" />
+  <div class="width-80-responsive common-page-layout overflow-y-hidden">
+    <div class="common-page-caption-layout">
+      <h1>Projects</h1>
+    </div>
+    <div class="common-page-content-layout">
+      <app-project-carousel 
+        [projects]="getProjects()" 
+        [order]="getOrder()"
+      />
+    </div>
   </div>
 </div>

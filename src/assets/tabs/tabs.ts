@@ -1,19 +1,11 @@
-export type Tab = {
-  readonly index: number,
-  readonly key: string,
-  readonly caption: string
+import Tab, { createTab } from "../../model/Tab";
+
+export type Tabs = {
+  [key: string]: Tab
 }
 
-const createTab = (index: number, key: string, caption: string): Tab => {
-  return {
-    index,
-    key,
-    caption
-  };
-};
-
-export const TABS = {
-  0: createTab(0, "about", "About me"),
-  1: createTab(1, "projects", "Projects"),
-  2: createTab(2, "contact", "Contact me")
+export const TABS: Tabs = {
+  "about": createTab("about", "About me", "about"),
+  "projects": createTab("projects", "Projects", "projects"),
+  "contact": createTab("contact", "Contact me", "contact")
 };
