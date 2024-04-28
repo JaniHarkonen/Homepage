@@ -26,11 +26,16 @@
             <div>
               <h3>Skills</h3>
               <br />
-              <div class="about-tech-stack-layout">
-                <app-technology-stack
-                  [order]="getTechnologyOrder()"
-                  
-                />
+              <div
+                class="about-tech-stack-layout"
+                *ngFor="let skillBracket of getSkillsByBracket()"
+              >
+                <div>
+                  {{ skillBracket.description }}
+                </div>
+                <div>
+                  <app-technology-stack [order]="skillBracket.technologyIDs" />
+                </div>
               </div>
             </div>
           </section>
