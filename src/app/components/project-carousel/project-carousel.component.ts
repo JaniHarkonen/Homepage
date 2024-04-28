@@ -5,7 +5,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Projects } from '../../../assets/projects/projects';
 import { CONFIG } from '../../../pathConfig';
 import { ExpandCollapseAnimation } from '../../animations/expand-collapse.anim';
-import { HorizontalSlideAnimation } from '../../animations/horizontal-slide.anim';
 
 import ProjectInfo from '../../../model/ProjectInfo';
 
@@ -31,10 +30,7 @@ type ProjectSelection = {
   ],
   templateUrl: './project-carousel.component.html',
   styleUrl: './project-carousel.component.css',
-  animations: [
-    ExpandCollapseAnimation,
-    HorizontalSlideAnimation
-  ]
+  animations: [ExpandCollapseAnimation]
 })
 export class ProjectCarouselComponent {
   /**
