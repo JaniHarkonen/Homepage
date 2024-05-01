@@ -36,7 +36,13 @@
   background-color: white;
   color: black;
   font-size: 16px;
-  
+}
+
+.site-header-button-highlight {
+  padding: 10px;
+
+  border-radius: 20px;
+
   &:hover {
     cursor: pointer;
     background-color: #DBDBDB;

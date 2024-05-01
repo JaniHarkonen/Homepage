@@ -166,6 +166,14 @@ address {
   padding-left: 20px;
 }
 
+.minor-divider {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #DBDBDB;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 1050px) {
   .common-page-layout {
     grid-template-rows: repeat(30, 1fr);

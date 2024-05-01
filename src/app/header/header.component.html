@@ -6,7 +6,9 @@
       [routerLink]="tabs[tabKey].routerLink"
       [style]="isTabSelected(tabKey) ? {borderBottomColor: 'black'} : {borderBottomColor: 'white'}"
     >
-      {{tabs[tabKey].caption}}
+      <div class="site-header-button-highlight">
+        {{tabs[tabKey].caption}}
+      </div>
     </button>
   </div>
 </div>

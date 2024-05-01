@@ -1,6 +1,1 @@
-- switch from public fields to private ones and implement getters
-- extract the frequently occurring page layout stylings into the global styles.css
-  -- common-page-layout created
-- create a model folder where types and interfaces will be stored
 - add SQL to the tech stack
-- make sure encapsulation is followed properly, other OOP concepts
