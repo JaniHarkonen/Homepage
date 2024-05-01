@@ -22,10 +22,9 @@
 }
 
 .site-header-tab-button {
-  width: auto;
-
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   border-width: 0px;
   border-style: solid;
@@ -39,9 +38,12 @@
 }
 
 .site-header-button-highlight {
-  padding: 10px;
-
   border-radius: 20px;
+  padding: 10px;
+  
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   &:hover {
     cursor: pointer;
@@ -49,14 +51,16 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .site-header-tab-button {
-    font-size: 18px;
+@media (max-width: 400px) {
+  .site-header {
+    gap: 0px;
   }
-}
 
-@media screen and (max-width: 360px) {
   .site-header-tab-button {
     font-size: 15px;
+  }
+
+  .site-header-button-highlight {
+    padding: 0px;
   }
 }
