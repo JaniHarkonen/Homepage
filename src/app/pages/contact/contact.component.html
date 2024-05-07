@@ -1,9 +1,9 @@
-<div class="fade-in-on-load d-flex justify-content-center height-100">
-  <div class="width-80-responsive common-page-layout">
+<div class="fade-in-on-load height-100 d-flex justify-content-center">
+  <div class="common-page-layout width-80-responsive">
     <div class="common-page-caption-layout">
       <h1>Contact me</h1>
     </div>
-    <div class="common-page-content-layout">
+    <div class="common-page-content-layout overflow-y-auto">
       <address>
         <div 
           class="contact-list-item"
@@ -17,17 +17,10 @@
               class="contact-platform-icon-layout" 
               [src]="platform.iconURL" 
             />
-            <div class="white-space-nowrap">
-              <a
-                class="contact-platform-link-layout"
+            <div class="contact-platform-link-layout white-space-nowrap">
+              <app-popup-link
                 [href]="platform.url"
-                target="_blank"
-              >
-                {{ platform.name }}
-              </a>
-              <img
-                class="popup-link-icon"
-                src="../../../assets/images/popup-link-icon.svg"
+                [caption]="platform.name"
               />
             </div>
           </div>

@@ -3,11 +3,12 @@ import { CONTACT_INFO } from '../../../assets/contact-info';
 import { NgFor } from '@angular/common';
 
 import ContactInfo from '../../../model/ContactInfo';
+import { PopupLinkComponent } from '../../components/popup-link/popup-link.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, PopupLinkComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {  RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { TABS } from '../assets/tabs/tabs';
 
@@ -14,11 +14,13 @@ import { TABS } from '../assets/tabs/tabs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  public tabOrder: string[] = [
+  private tabOrder: string[] = [
     TABS["about"].id,
     TABS["projects"].id,
     TABS["contact"].id
   ];
 
-  title = 'homepage';
+  public getTabs(): string[] {
+    return this.tabOrder;
+  }
 }

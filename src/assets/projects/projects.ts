@@ -11,7 +11,7 @@ export const PROJECTS: Projects = {
     "JOHNEngine", 
     "johnengine/brief.html", 
     "johnengine/desc.html",
-    "testing/test.mp4",
+    "https://www.youtube.com/embed/01rXk7iRDwg",
     "https://github.com/JaniHarkonen/JOHNEngine"
     // status here
   ),
@@ -20,7 +20,7 @@ export const PROJECTS: Projects = {
     "Editor2D2", 
     "editor2d2/brief.html", 
     "editor2d2/desc.html",
-    "testing/test2.mp4",
+    "https://www.youtube.com/embed/01rXk7iRDwg",
     "https://github.com/JaniHarkonen/Editor2D2"
     // status here
   ),
@@ -29,7 +29,7 @@ export const PROJECTS: Projects = {
     "DumpEmSuite", 
     "dumpem-suite/brief.html", 
     "dumpem-suite/desc.html",
-    "testing/test.mp4",
+    "https://www.youtube.com/embed/01rXk7iRDwg",
     "https://github.com/JaniHarkonen/DumpEmSuite"
     // status here
   ),
@@ -38,7 +38,7 @@ export const PROJECTS: Projects = {
     "MerchBetter", 
     "merch-better/brief.html", 
     "merch-better/desc.html",
-    "testing/test2.mp4",
+    "https://www.youtube.com/embed/01rXk7iRDwg",
     "https://github.com/JaniHarkonen/MerchBetter"
     // status here
   )

@@ -12,7 +12,6 @@
 
 .top-level-layout {
   display: grid;
-  /*grid-template-rows: repeat(10, 1fr);*/
   grid-template-rows: repeat(20, 1fr);
   width: 80%;
 }

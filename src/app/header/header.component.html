@@ -4,9 +4,11 @@
       class="site-header-tab-button" 
       *ngFor="let tabKey of order" 
       [routerLink]="tabs[tabKey].routerLink"
-      [style]="isTabSelected(tabKey) ? {borderBottomColor: 'black'} : {borderBottomColor: 'white'}"
+      [style]="isTabSelected(tabKey) ? {borderBottomColor: 'black'} : {borderBottomColor: '#f8f5ec'}"
     >
-      {{tabs[tabKey].caption}}
+      <div class="site-header-button-highlight">
+        {{tabs[tabKey].caption}}
+      </div>
     </button>
   </div>
 </div>

@@ -13,7 +13,6 @@ import Technology from '../../../model/Technology';
 })
 export class TechnologyStackComponent {
   @Input() order: string[] = [];
-  @Input() experienceLevels: string[] | undefined;
 
   public getTechnologies(): Technology[] {
     return this.order.map((techID) => TECHNOLOGIES[techID]);
