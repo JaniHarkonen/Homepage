@@ -36,6 +36,16 @@
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-tech-stack-layout {
+    width: 100%;
+
+    grid-template-columns: auto;
+    gap: 10px;
+    margin-bottom: 30px;
+  } 
+}
+
 @media screen and (max-width: 500px) {
   .about-face-image-layout {
     width: 100%;
@@ -44,10 +54,4 @@
   .about-face-image {
     width: 166px;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  .about-tech-stack-layout {
-    width: 100%;
-  } 
 }

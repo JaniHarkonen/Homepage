@@ -1,7 +1,7 @@
 <div class="app-container">
   <div class="top-level-layout">
     <nav class="header-layout">
-      <app-header [order]="tabOrder" />
+      <app-header [order]="getTabs()" />
     </nav>
     <div class="wrapper-layout">
       <router-outlet />

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { TechnologyStackComponent } from '../../components/technology-stack/technology-stack.component';
-import { TECHNOLOGIES } from '../../../assets/technologies/technologies';
 import { Router, RouterModule } from '@angular/router';
+
+const TRANSITION_TIME = 8000;
 
 @Component({
   selector: 'app-landing',
@@ -11,24 +12,22 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
-  private usedTechnologies: string [] = [
-    TECHNOLOGIES["angular"].id
-  ];
-
   private router: Router;
+  private transitionTimeout: any;
 
   constructor(router: Router) {
     this.router = router;
+    this.transitionTimeout = null;
   }
 
   ngOnInit() {
-    setTimeout(
+    this.transitionTimeout = setTimeout(
       () => this.router.navigateByUrl("/about"), 
-      8000
+      TRANSITION_TIME
     );
   }
 
-  public getTechnologies(): string[] {
-    return this.usedTechnologies;
+  ngOnDestroy() {
+    clearTimeout(this.transitionTimeout);
   }
 }

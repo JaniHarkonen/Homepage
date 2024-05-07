@@ -16,7 +16,7 @@ export const TECHNOLOGIES: Technologies = {
   "css3": createTechnology("css3", "CSS3", iconRoot + "css3-original-wordmark.svg"),
   "express": createTechnology("express", "Express", iconRoot + "express-original-wordmark.svg"),
   "java": createTechnology("java", "Java", iconRoot + "java-original.svg"),
-  //SQL here
+  "sql": createTechnology("sql", "SQL", iconRoot + "sql.png"),
   "sqlite": createTechnology("sqlite", "SQLite", iconRoot + "sqlite-original.svg"),
   "aframe": createTechnology("aframe", "A-Frame", iconRoot + "A-Frame_logo.png"),
   "electron": createTechnology("electron", "Electron", iconRoot + "electron-original.svg"),

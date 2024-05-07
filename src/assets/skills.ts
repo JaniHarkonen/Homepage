@@ -25,6 +25,7 @@ export const SKILLS: SkillBracket[] = [
       TECHNOLOGIES["opengl"].id,
       TECHNOLOGIES["aframe"].id,
       TECHNOLOGIES["bootstrap"].id,
+      TECHNOLOGIES["sql"].id,
       TECHNOLOGIES["sqlite"].id,
       TECHNOLOGIES["angular"].id,
       TECHNOLOGIES["typescript"].id,
@@ -32,63 +33,3 @@ export const SKILLS: SkillBracket[] = [
     ]
   }
 ];
-
-/*export const SKILLS: Skill[][] = [
-  {
-    technologyID: TECHNOLOGIES["javascript"].id,
-    experience: "4+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["java"].id,
-    experience: "4+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["html5"].id,
-    experience: "4+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["css3"].id,
-    experience: "4+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["nodejs"].id,
-    experience: "4+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["react"].id,
-    experience: "3+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["electron"].id,
-    experience: "3+ years"
-  },
-  {
-    technologyID: TECHNOLOGIES["opengl"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["aframe"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["bootstrap"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["sqlite"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["angular"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["typescript"].id,
-    experience: "< 1 year"
-  },
-  {
-    technologyID: TECHNOLOGIES["express"].id,
-    experience: "< 1 year"
-  }
-];
-*/

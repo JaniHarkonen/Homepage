@@ -1,9 +1,9 @@
 <div class="project-carousel-layout">
-  <div class="project-card-video-layout">
+  <div>
     <iframe 
       class="project-card-video"
       allowfullscreen
-      src="https://www.youtube.com/embed/01rXk7iRDwg"
+      [src]="getVideoURL()"
     >
     </iframe>
   </div>
@@ -17,8 +17,7 @@
     >
       <div class="emphasized-paragraph">
         <br />
-        <div [innerHTML]="getDescriptionHTML()">
-        </div>
+        <div [innerHTML]="getDescriptionHTML()">Loading...</div>
         <br />
       </div>
       <div class="project-card-controls-layout">
@@ -34,7 +33,7 @@
             />
           </a>
         </div>
-        <div></div>
+        <div></div><!-- Empty div to fill the space between description and controls -->
         <div>
           <button
             class="generic-button project-card-expand-button"

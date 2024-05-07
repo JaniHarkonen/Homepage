@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SecurityContext } from '@angular/core';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { nmod } from '../../../utils';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -7,6 +7,7 @@ import { CONFIG } from '../../../pathConfig';
 import { ExpandCollapseAnimation } from '../../animations/expand-collapse.anim';
 
 import ProjectInfo from '../../../model/ProjectInfo';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 /**
  * Holds the state of the currently selected project including its index
@@ -30,7 +31,7 @@ type ProjectSelection = {
   ],
   templateUrl: './project-carousel.component.html',
   styleUrl: './project-carousel.component.css',
-  animations: [ExpandCollapseAnimation]
+  animations: [ExpandCollapseAnimation()]
 })
 export class ProjectCarouselComponent {
   /**
@@ -51,10 +52,17 @@ export class ProjectCarouselComponent {
    */
   private httpClient: HttpClient;
 
+  /**
+   * DOM sanitizer is used to bypass security restrictions in order
+   * to access the YouTube-links of the project demonstration videos.
+   * The demonstration URLs are expected to be "safe".
+   */
+  private domSanitizer: DomSanitizer;
+
   @Input() projects!: Projects;
   @Input() order: string[] = [];
 
-  constructor(httpClient: HttpClient) {
+  constructor(httpClient: HttpClient, domSanitizer: DomSanitizer) {
     this.showFullDescription = false;
     this.projectSelection = {
       index: 0,
@@ -63,6 +71,7 @@ export class ProjectCarouselComponent {
       descriptionHTML: ""
     };
     this.httpClient = httpClient;
+    this.domSanitizer = domSanitizer;
   }
 
   ngOnInit(): void {
@@ -130,10 +139,13 @@ export class ProjectCarouselComponent {
 
   /**
    * @returns The URL to the demonstration video of the currently selected
-   * project.
+   * project as a SafeUrl-instance. DOM sanitizer will be used to bypass 
+   * security restrictions as the URLs are assumed to be safe.
    */
-  public getVideoURL(): string {
-    return CONFIG.paths.projects + this.projectSelection.projectInfo?.videoURL;
+  public getVideoURL(): SafeUrl {
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.projectSelection.projectInfo?.videoURL || ""
+    );
   }
   
   /**
