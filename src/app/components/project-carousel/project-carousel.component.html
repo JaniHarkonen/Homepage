@@ -22,16 +22,10 @@
       </div>
       <div class="project-card-controls-layout">
         <div>
-          <a
+          <app-popup-link
             [href]="getProjectLink()"
-            target="_blank"
-          >
-            View on GitHub
-            <img
-              class="popup-link-icon"
-              src="../../../assets/images/popup-link-icon.svg"
-            />
-          </a>
+            caption="View on GitHub"
+          />
         </div>
         <div></div><!-- Empty div to fill the space between description and controls -->
         <div>

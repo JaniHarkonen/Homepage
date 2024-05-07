@@ -17,17 +17,10 @@
               class="contact-platform-icon-layout" 
               [src]="platform.iconURL" 
             />
-            <div class="white-space-nowrap">
-              <a
-                class="contact-platform-link-layout"
+            <div class="contact-platform-link-layout white-space-nowrap">
+              <app-popup-link
                 [href]="platform.url"
-                target="_blank"
-              >
-                {{ platform.name }}
-              </a>
-              <img
-                class="popup-link-icon"
-                src="../../../assets/images/popup-link-icon.svg"
+                [caption]="platform.name"
               />
             </div>
           </div>

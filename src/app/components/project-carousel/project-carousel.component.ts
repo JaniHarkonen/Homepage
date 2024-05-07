@@ -8,6 +8,7 @@ import { ExpandCollapseAnimation } from '../../animations/expand-collapse.anim';
 
 import ProjectInfo from '../../../model/ProjectInfo';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { PopupLinkComponent } from '../popup-link/popup-link.component';
 
 /**
  * Holds the state of the currently selected project including its index
@@ -27,7 +28,8 @@ type ProjectSelection = {
   standalone: true,
   imports: [
     TimelineComponent,
-    HttpClientModule
+    HttpClientModule,
+    PopupLinkComponent
   ],
   templateUrl: './project-carousel.component.html',
   styleUrl: './project-carousel.component.css',

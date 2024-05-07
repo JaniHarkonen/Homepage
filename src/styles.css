@@ -129,21 +129,6 @@ address {
   }
 }
 
-.popup-link-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  filter: 
-    brightness(0) 
-    saturate(100%) 
-    invert(9%) 
-    sepia(100%) 
-    saturate(7174%) 
-    hue-rotate(248deg) 
-    brightness(81%) 
-    contrast(140%);
-}
-
 .common-page-layout {
   display: grid;
   grid-template-rows: repeat(20, 1fr);
