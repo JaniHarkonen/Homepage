@@ -12,8 +12,9 @@ import { PROJECTS, Projects } from '../../../assets/projects/projects';
 export class ProjectsComponent {
   private projects: Projects = PROJECTS;
   private projectOrder: string[] = [
-    PROJECTS["johnengine"].id,
-    PROJECTS["editor2d2"].id,
+    //PROJECTS["articlesum"].id,
+    //PROJECTS["johnengine"].id,
+    //PROJECTS["editor2d2"].id,
     PROJECTS["merchbetter"].id,
     PROJECTS["dumpemsuite"].id,
   ];

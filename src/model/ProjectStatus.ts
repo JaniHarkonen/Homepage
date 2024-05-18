@@ -6,7 +6,7 @@ export default class ProjectStatus {
 
   private key: string;
 
-  constructor(key: string) {
+  private constructor(key: string) {
     this.key = key;
   }
 
