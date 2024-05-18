@@ -6,6 +6,15 @@ export type Projects = {
 }
 
 export const PROJECTS: Projects = {
+  "articlesum": createProject(
+    "articlesum", 
+    "ArticleSum.", 
+    "article-sum/brief.html", 
+    "article-sum/desc.html",
+    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "https://github.com/JaniHarkonen/ArticleSum."
+    // status here
+  ),
   "johnengine": createProject(
     "johnengine", 
     "JOHNEngine", 
@@ -29,7 +38,7 @@ export const PROJECTS: Projects = {
     "DumpEmSuite", 
     "dumpem-suite/brief.html", 
     "dumpem-suite/desc.html",
-    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "https://www.youtube.com/embed/Ojos-phJMKc",
     "https://github.com/JaniHarkonen/DumpEmSuite"
     // status here
   ),
@@ -38,7 +47,7 @@ export const PROJECTS: Projects = {
     "MerchBetter", 
     "merch-better/brief.html", 
     "merch-better/desc.html",
-    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "https://www.youtube.com/embed/W20e2Fv2wbQ",
     "https://github.com/JaniHarkonen/MerchBetter"
     // status here
   )

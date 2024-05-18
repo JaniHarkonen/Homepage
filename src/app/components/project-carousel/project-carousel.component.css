@@ -78,3 +78,15 @@
     grid-row: 2 / 3;
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .project-card-description-wrapper {
+    max-height: 50%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .project-card-description-wrapper {
+    max-height: 100%;
+  }
+}
