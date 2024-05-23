@@ -11,7 +11,7 @@ export const PROJECTS: Projects = {
     "ArticleSum.", 
     "article-sum/brief.html", 
     "article-sum/desc.html",
-    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "https://www.youtube.com/embed/cY_kpwwPkeU",
     "https://github.com/JaniHarkonen/ArticleSum."
     // status here
   ),

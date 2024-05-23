@@ -19,6 +19,7 @@ import { PopupLinkComponent } from '../popup-link/popup-link.component';
 type ProjectSelection = {
   index: number,
   projectInfo: ProjectInfo | null,
+  videoURL: SafeUrl | null,
   briefHTML: string,
   descriptionHTML: string
 }
@@ -69,6 +70,7 @@ export class ProjectCarouselComponent {
     this.projectSelection = {
       index: 0,
       projectInfo: null,
+      videoURL: "",
       briefHTML: "",
       descriptionHTML: ""
     };
@@ -106,7 +108,11 @@ export class ProjectCarouselComponent {
     this.httpClient.get(
       CONFIG.paths.projects + projectInfo.descriptionURL,
       { responseType: "text" }
-    ).subscribe((data) => this.projectSelection.descriptionHTML = data)
+    ).subscribe((data) => this.projectSelection.descriptionHTML = data);
+
+    this.projectSelection.videoURL = this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.projectSelection.projectInfo?.videoURL || ""
+    );
   }
 
   /**
@@ -145,9 +151,7 @@ export class ProjectCarouselComponent {
    * security restrictions as the URLs are assumed to be safe.
    */
   public getVideoURL(): SafeUrl {
-    return this.domSanitizer.bypassSecurityTrustResourceUrl(
-      this.projectSelection.projectInfo?.videoURL || ""
-    );
+    return this.projectSelection.videoURL || "";
   }
   
   /**
