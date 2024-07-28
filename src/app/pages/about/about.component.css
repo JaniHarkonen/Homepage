@@ -26,6 +26,17 @@
   overflow: hidden;
 }
 
+.about-introduction-video-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-introduction-video {
+  width: 75%;
+  aspect-ratio: 1920 / 1080;
+}
+
 .about-tech-stack-layout {
   width: 70%;
 
@@ -36,6 +47,10 @@
   margin-bottom: 20px;
 }
 
+iframe {
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .about-tech-stack-layout {
     width: 100%;
@@ -44,6 +59,10 @@
     gap: 10px;
     margin-bottom: 30px;
   } 
+
+  .about-introduction-video {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {

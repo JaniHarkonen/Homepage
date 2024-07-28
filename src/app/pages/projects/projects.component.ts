@@ -15,8 +15,8 @@ export class ProjectsComponent {
     PROJECTS["articlesum"].id,
     //PROJECTS["johnengine"].id,
     //PROJECTS["editor2d2"].id,
-    PROJECTS["merchbetter"].id,
     PROJECTS["dumpemsuite"].id,
+    PROJECTS["merchbetter"].id
   ];
 
   public getProjects(): Projects {
