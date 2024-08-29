@@ -16,6 +16,7 @@ export class ProjectsComponent {
     //PROJECTS["johnengine"].id,
     //PROJECTS["editor2d2"].id,
     PROJECTS["dumpemsuite"].id,
+    PROJECTS["dmtomax"].id,
     PROJECTS["merchbetter"].id
   ];
 

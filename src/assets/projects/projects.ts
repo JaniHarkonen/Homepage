@@ -20,7 +20,7 @@ export const PROJECTS: Projects = {
     "JOHNEngine", 
     "johnengine/brief.html", 
     "johnengine/desc.html",
-    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "",
     "https://github.com/JaniHarkonen/JOHNEngine"
     // status here
   ),
@@ -29,7 +29,7 @@ export const PROJECTS: Projects = {
     "Editor2D2", 
     "editor2d2/brief.html", 
     "editor2d2/desc.html",
-    "https://www.youtube.com/embed/01rXk7iRDwg",
+    "",
     "https://github.com/JaniHarkonen/Editor2D2"
     // status here
   ),
@@ -50,5 +50,13 @@ export const PROJECTS: Projects = {
     "https://www.youtube.com/embed/W20e2Fv2wbQ",
     "https://github.com/JaniHarkonen/MerchBetter"
     // status here
+  ),
+  "dmtomax": createProject(
+    "dmtomax",
+    "DMtoMax",
+    "dmtomax/brief.html",
+    "dmtomax/desc.html",
+    "https://www.youtube.com/embed/dXf_y0Hq_GM",
+    "https://github.com/JaniHarkonen/DMTOMAX"
   )
 }
