@@ -6,29 +6,30 @@ export const SKILLS: SkillBracket[] = [
     description: "4+ years",
     technologyIDs: [
       TECHNOLOGIES["javascript"].id,
+      TECHNOLOGIES["react"].id,
       TECHNOLOGIES["java"].id,
       TECHNOLOGIES["html5"].id,
       TECHNOLOGIES["css3"].id,
       TECHNOLOGIES["nodejs"].id,
+      TECHNOLOGIES["electron"].id
     ]
   },
   {
-    description: "3+ years",
+    description: "1+ years",
     technologyIDs: [
-      TECHNOLOGIES["react"].id,
-      TECHNOLOGIES["electron"].id
+      TECHNOLOGIES["typescript"].id,
+      TECHNOLOGIES["sql"].id,
+      TECHNOLOGIES["sqlite"].id
     ]
   },
   {
     description: "<1 years",
     technologyIDs: [
+      TECHNOLOGIES["golang"].id,
       TECHNOLOGIES["opengl"].id,
       TECHNOLOGIES["aframe"].id,
       TECHNOLOGIES["bootstrap"].id,
-      TECHNOLOGIES["sql"].id,
-      TECHNOLOGIES["sqlite"].id,
       TECHNOLOGIES["angular"].id,
-      TECHNOLOGIES["typescript"].id,
       TECHNOLOGIES["express"].id,
     ]
   }

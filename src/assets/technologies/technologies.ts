@@ -21,5 +21,6 @@ export const TECHNOLOGIES: Technologies = {
   "aframe": createTechnology("aframe", "A-Frame", iconRoot + "A-Frame_logo.png"),
   "electron": createTechnology("electron", "Electron", iconRoot + "electron-original.svg"),
   "opengl": createTechnology("opengl", "OpenGL", iconRoot + "opengl-original.svg"),
-  "nodejs": createTechnology("nodejs", "Node.js", iconRoot + "nodejs-original.svg")
+  "nodejs": createTechnology("nodejs", "Node.js", iconRoot + "nodejs-original.svg"),
+  "golang": createTechnology("golang", "Go", iconRoot + "go-original-wordmark.svg")
 };

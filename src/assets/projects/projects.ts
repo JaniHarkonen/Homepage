@@ -6,6 +6,15 @@ export type Projects = {
 }
 
 export const PROJECTS: Projects = {
+  "dumpemsuite2": createProject(
+    "dumpemsuite2", 
+    "DumpEm Suite 2", 
+    "dumpem-suite2/brief.html", 
+    "dumpem-suite2/desc.html",
+    "https://www.youtube.com/embed/QJSO-HjtWXI",
+    "https://github.com/JaniHarkonen/DumpEmSuite2"
+    // status here
+  ),
   "articlesum": createProject(
     "articlesum", 
     "ArticleSum.", 
@@ -35,7 +44,7 @@ export const PROJECTS: Projects = {
   ),
   "dumpemsuite": createProject(
     "dumpemsuite", 
-    "DumpEmSuite", 
+    "DumpEm Suite", 
     "dumpem-suite/brief.html", 
     "dumpem-suite/desc.html",
     "https://www.youtube.com/embed/Ojos-phJMKc",
